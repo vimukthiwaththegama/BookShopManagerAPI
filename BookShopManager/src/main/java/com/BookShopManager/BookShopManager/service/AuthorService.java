@@ -1,4 +1,4 @@
 package com.BookShopManager.BookShopManager.service;
 
-public class AuthorService {
+public interface AuthorService {
 }
