@@ -1,4 +1,4 @@
 package com.BookShopManager.BookShopManager.service.implementation;
 
-public class BookOrderService {
+public class CustomerServiceImpl {
 }
