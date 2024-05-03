@@ -17,4 +17,14 @@ public class CustomerDto {
     private String custEmail;
     @ManyToMany(mappedBy = "   customers")
     private List<Book> books;
+
+    @Override
+    public String toString(){
+        return "CustomerDto{" +
+                "custId='" + custId + '\'' +
+                ", custName='" + custName + '\'' +
+                ", custEmail='" + custEmail + '\'' +
+                ", book='" + books +
+                '}';
+    }
 }
