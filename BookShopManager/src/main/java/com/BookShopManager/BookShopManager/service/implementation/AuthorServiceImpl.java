@@ -1,11 +1,13 @@
 package com.BookShopManager.BookShopManager.service.implementation;
 
 import com.BookShopManager.BookShopManager.dto.AuthorDto;
+import com.BookShopManager.BookShopManager.entity.Author;
 import com.BookShopManager.BookShopManager.repo.AuthorRepository;
 import com.BookShopManager.BookShopManager.service.AuthorService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class AuthorServiceImpl implements AuthorService {
@@ -17,24 +19,38 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public void saveAuthor(AuthorDto authorDto) {
-
+        authorRepository.save(new Author(authorDto.getAuthorId(),authorDto.getAuthorName(),authorDto.getBooks()));
     }
 
     @Override
     public void updateAuthor(AuthorDto authorDto) {
-
+        Optional<Author> tempAuthor = authorRepository.findById(authorDto.getAuthorId());
+        if(tempAuthor.isPresent()){
+            tempAuthor.get().setAuthorName(authorDto.getAuthorName());
+            tempAuthor.get().setBooks(authorDto.getBooks());
+        }
     }
 
     @Override
     public void deleteAuthor(String authorId) {
-
+        Optional<Author> tempAuthor =authorRepository.findById(authorId);
+        if (tempAuthor.isPresent()){
+        authorRepository.delete(tempAuthor.get());
+        }
     }
 
     @Override
     public AuthorDto getCustomer(String authorId) {
-        return null;
+        Optional<Author> authorData = authorRepository.findById(authorId);
+        if(authorData.isPresent()){
+            return new AuthorDto(
+            authorData.get().getAuthorId(),
+            authorData.get().getAuthorName(),
+            authorData.get().getBooks());
+        }else{
+            return null;
+        }
     }
-
     @Override
     public ArrayList<AuthorDto> getAllAuthors(int size, int page, String searchText) {
         return null;
