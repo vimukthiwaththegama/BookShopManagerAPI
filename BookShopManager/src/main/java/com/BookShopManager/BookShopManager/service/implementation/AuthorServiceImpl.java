@@ -41,7 +41,7 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public AuthorDto getCustomer(String authorId) {
+    public AuthorDto getAuthor(String authorId) {
         Optional<Author> authorData = authorRepository.findById(authorId);
         if(authorData.isPresent()){
             return new AuthorDto(

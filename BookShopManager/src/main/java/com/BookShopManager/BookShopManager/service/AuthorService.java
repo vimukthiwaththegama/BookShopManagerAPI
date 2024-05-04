@@ -8,6 +8,6 @@ public interface AuthorService {
     void saveAuthor(AuthorDto authorDto);
     void updateAuthor(AuthorDto authorDto);
     void deleteAuthor(String authorId);
-    AuthorDto getCustomer(String authorId);
+    AuthorDto getAuthor(String authorId);
     ArrayList<AuthorDto> getAllAuthors(int size,int page,String searchText);
 }
