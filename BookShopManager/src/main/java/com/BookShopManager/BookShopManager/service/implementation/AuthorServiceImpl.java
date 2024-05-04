@@ -7,7 +7,6 @@ import com.BookShopManager.BookShopManager.service.AuthorService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -52,13 +51,9 @@ public class AuthorServiceImpl implements AuthorService {
             return null;
         }
     }
+
     @Override
     public ArrayList<AuthorDto> getAllAuthors(int size, int page, String searchText) {
-        List<Author> allAuthors =authorRepository.findAll();
-        ArrayList<AuthorDto> authorDtos=new ArrayList<>();
-        for(Author author:allAuthors){
-            authorDtos.add(new AuthorDto(author.getAuthorId(),author.getAuthorName(),author.getBooks()));
-        }
-        return authorDtos;
+        return null;
     }
 }
