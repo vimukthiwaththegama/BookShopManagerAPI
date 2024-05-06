@@ -21,7 +21,7 @@ public class AuthorController {
         authorService.updateAuthor(authorDto);
     }
     @DeleteMapping
-    public void deleteAuthor(@RequestParam String  id){
+    public void deleteAuthor(@RequestParam String   id){
         authorService.deleteAuthor(id);
     }
     @GetMapping("/{id}")

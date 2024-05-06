@@ -40,6 +40,4 @@ public class BookDto {
                 ", price='" + price +
                 '}';
     }
-
-
 }

@@ -18,7 +18,6 @@ import java.util.List;
 @Builder
 public class Author {
     @Id
-    @GeneratedValue
     private String authorId;
     private String authorName;
     @OneToMany(mappedBy = "author")
