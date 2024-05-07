@@ -4,10 +4,12 @@ import com.BookShopManager.BookShopManager.dto.BookDto;
 import com.BookShopManager.BookShopManager.entity.Book;
 import com.BookShopManager.BookShopManager.repo.BookRepository;
 import com.BookShopManager.BookShopManager.service.BookService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+@Service
 
 public class BookServiceImpl implements BookService {
     private final BookRepository bookRepository;
