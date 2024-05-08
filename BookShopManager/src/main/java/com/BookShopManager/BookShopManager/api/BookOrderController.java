@@ -28,7 +28,7 @@ public class BookOrderController {
     public BookOrderDto getBookOrder(@PathVariable String orderId){
         return bookOrderService.getBookOrder(orderId);
     }
-    @GetMapping("bookOrderList")
+    @GetMapping("/bookOrderList")
     public ArrayList<BookOrderDto> getAllBookksOrder(int size,int page,String orderId){
         return bookOrderService.getAllBookOrders(size, page, orderId);
     }
