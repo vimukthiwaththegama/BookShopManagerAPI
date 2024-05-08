@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public interface BookService {
     void saveBook(BookDto bookDto);
-
     void updateBook(BookDto bookDto);
     void deletebook(String bookId);
     BookDto getBook(String bookId);
