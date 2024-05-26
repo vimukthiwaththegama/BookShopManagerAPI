@@ -20,7 +20,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void saveBook(BookDto bookDto) {
-        bookRepository.save(new Book(bookDto.getBookId(),bookDto.getAuthor(),bookDto.getName(),bookDto.getPrice(),bookDto.getCustomers()));
+        bookRepository.save(new Book(bookDto.getBookId(),bookDto.getAuthor(),bookDto.getName(),bookDto.getPrice()));
     }
 
     @Override
@@ -30,12 +30,11 @@ public class BookServiceImpl implements BookService {
             tempBook.get().setAuthor(bookDto.getAuthor());
             tempBook.get().setName(bookDto.getName());
             tempBook.get().setPrice(bookDto.getPrice());
-            tempBook.get().setCustomers(bookDto.getCustomers());
         }
     }
 
     @Override
-    public void deletebook(String bookId) {
+    public void deletebook(Integer bookId) {
         Optional<Book> tempBook=bookRepository.findById(bookId);
         if(tempBook.isPresent()){
             bookRepository.delete(tempBook.get());
@@ -43,15 +42,14 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public BookDto getBook(String bookId) {
+    public BookDto getBook(Integer bookId) {
         Optional<Book> tempBook=bookRepository.findById(bookId);
         if(tempBook.isPresent()){
             return new BookDto(
                     tempBook.get().getBookId(),
                     tempBook.get().getAuthor(),
                     tempBook.get().getName(),
-                    tempBook.get().getPrice(),
-                    tempBook.get().getCustomers()
+                    tempBook.get().getPrice()
             );
         }else{
             return null;
@@ -63,7 +61,7 @@ public class BookServiceImpl implements BookService {
         List<Book> all = bookRepository.findAll();
         ArrayList<BookDto> bookDtos = new ArrayList<>();
         for(Book book:all){
-            bookDtos.add(new BookDto(book.getBookId(),book.getAuthor(),book.getName(),book.getPrice(),book.getCustomers()));
+            bookDtos.add(new BookDto(book.getBookId(),book.getAuthor(),book.getName(),book.getPrice()));
         }
         return bookDtos;
     }

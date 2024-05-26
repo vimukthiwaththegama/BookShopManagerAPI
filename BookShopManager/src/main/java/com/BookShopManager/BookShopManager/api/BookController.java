@@ -22,11 +22,11 @@ public class BookController {
         bookService.updateBook(bookDto);
     }
     @DeleteMapping
-    public void deleteBook(@RequestParam String bookId){
+    public void deleteBook(@RequestParam Integer bookId){
         bookService.deletebook(bookId);
     }
     @GetMapping("/{id}")
-    public BookDto getBook(@PathVariable String bookId){
+    public BookDto getBook(@PathVariable Integer bookId){
         return bookService.getBook(bookId);
     }
     @GetMapping("/bookList")

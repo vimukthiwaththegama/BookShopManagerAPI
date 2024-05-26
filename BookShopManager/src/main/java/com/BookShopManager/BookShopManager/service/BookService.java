@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public interface BookService {
     void saveBook(BookDto bookDto);
     void updateBook(BookDto bookDto);
-    void deletebook(String bookId);
-    BookDto getBook(String bookId);
+    void deletebook(Integer bookId);
+    BookDto getBook(Integer bookId);
     ArrayList<BookDto> getAllBooks(int size, int page, String searchText);
 }

@@ -15,21 +15,11 @@ import java.util.List;
 @NoArgsConstructor
 
 public class BookDto {
-    private String bookId;
+    private Integer bookId;
     private Author author;
     private String name;
     private double price;
-    @ManyToMany
-    @JoinTable(
-            name = "books_customers",
-            joinColumns = {
-                    @JoinColumn(name = "book_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "cust_id")
-            }
-    )
-    private List<Customer> customers;
+
 
     @Override
      public String toString(){

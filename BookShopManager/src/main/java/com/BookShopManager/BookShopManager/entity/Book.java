@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+
 
 @Entity
 @Data
@@ -15,21 +15,9 @@ import java.util.List;
 @Builder
 public class Book {
     @Id
-    private String bookId;
+    private Integer bookId;
     @ManyToOne
     private Author author;
     private String name;
     private double price;
-    @ManyToMany
-    @JoinTable(
-            name = "books_customers",
-            joinColumns = {
-                    @JoinColumn(name = "book_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "cust_id")
-            }
-    )
-    private List<Customer> customers;
-
 }

@@ -21,9 +21,7 @@ public class Customer {
     private String custId;
     private String custName;
     private String custEmail;
-    @ManyToMany(mappedBy = "customers")
+    @OneToMany
     private List<Book> books;
-
-
 }
 
