@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BookShopManager",
+    "\\BookShopManager\\src",
+    "\\BookShopManager\\src\\main",
+    "\\BookShopManager\\src\\main\\java",
+    "\\BookShopManager\\src\\main\\java\\com",
+    "\\BookShopManager\\src\\main\\java\\com\\BookShopManager",
+    "\\BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager",
+    "\\BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api"
+  ],
+  "SelectedNode": "\\BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api\\AuthorController.java",
+  "PreviewInSolutionExplorer": false
+}

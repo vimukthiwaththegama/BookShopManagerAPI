@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Personal\\My Projects\\Springboot\\BookShopManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\My Projects\\Springboot\\BookShopManager\\BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api\\AuthorController.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api\\AuthorController.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorController.java",
+              "DocumentMoniker": "D:\\Personal\\My Projects\\Springboot\\BookShopManager\\BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api\\AuthorController.java",
+              "RelativeDocumentMoniker": "BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api\\AuthorController.java",
+              "ToolTip": "D:\\Personal\\My Projects\\Springboot\\BookShopManager\\BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api\\AuthorController.java",
+              "RelativeToolTip": "BookShopManager\\src\\main\\java\\com\\BookShopManager\\BookShopManager\\api\\AuthorController.java",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA1AAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN4SURBVDhPXZJbaBxVGMf/55zZyZDsZpOti2YTs6k2YdNo0tIExAs2Boo\u002BFCIYLIESqqJ9EMVLbV\u002BU4A0vaFFQsPQmVawxgUIffIj6oBEiRNNodm00MZe2ydZkdS\u002BzuzNzzpzj2aVPfnBmODPn\u002B8/v/OYQ6Bq4KxKfPN11AsZqJ7zAL\u002BoSUtiky1gJ/sg\u002BmE1V1rDXPxuofejAXGGPsVWZV0spVQ14cSRx3zvP7bmAclOjWrCg3roCIl3dFSivlkJ7E/fHLX/42U9YiIepvfK0\u002B9TgpFpZsiu9rHKZOvvgkO9G9v\u002Bz1EXyn3egYDMUuI2Cg0DWiNx9qWegL614L3UyIdRaD9D\u002BflN2J\u002Bbx3belKoGcfeKnzFJr39j498gkM/BKFF5BwREStmIaiqpl06Uu4fCaW8Hf\u002BKgo72ibZPOzh6j6daQbTrRP/J3AZjqLO0cGce/RJyHjjbgqbHQN7yO37miixtY1yI0lYH0NKleuo7YalNg9TbFR/7ya2S3wc0jJjIHlZBLR1u24vr4BrhQ6ensQid0MaYQBqv342t0GgZr0ob7x0xQnmjx8JUtIKp3cgOwVB47jouxy0IAJwhg8T8AnFDCCOsAAlrW663rvNSpJb7v47hG8OfqDGnqF5KzL6H/sIGI72rF3\u002BFG8euEMtnd2YPHyIvT3IAnT1k1YQmNYCqhVKaJ\u002Bi/bKjJxen5F09AuB1bQCL5rwuAlVY8H2OEqKIUc1idJUdbfAHDqLfOJ2SIYBijF2Dz618pgLgutghwo4Zgkllse/xQzyvISiX4Avihqfg1OlAzW\u002BHn4NW6BDZ3InyVrzC9IO/Sm0NKFfcFm5SwgNnNMe8ozAkWVwoYOUC2FBHzTIXQu8SMevlosPL/7xtdxGfvd9gsPHXsN758bx4fkJfDzxJVxKdJMeRDvQJnwpoEwCkyoREqpdK4XeJ40Z9k09UZrF\u002BNvvw8vWI0\u002BCSIUtyIY2Tcv1Kg9ScqhwDKSBSSPki0IzdlYDIAL10XJL7EhdAsVCm7oW6V4/39kiku1mCyyfyToPpFH/ZkcCJoNsChUKQW/qrwhdqx7lmV2HjvWw\u002BMveZnwqFUhcPJx\u002BaXo1HJD5x089I4ONB/16lzBiAlkqVMAfk/MTE2rm3BwCWKkC8J3HDxwN7mutTv5X1qnMI\u002Bx0ZqvmePkkRuW2G49vFPAfq6u0agMMZMYAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-05-26T07:58:50.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
