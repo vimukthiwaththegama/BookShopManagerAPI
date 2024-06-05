@@ -18,10 +18,6 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 public class ApplicationSecurityConfig  {
 
-    /*public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.httpBasic(withDefaults());
-        return http.build();
-    }*/
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((authorize) -> authorize.anyRequest().authenticated()
@@ -35,8 +31,8 @@ public class ApplicationSecurityConfig  {
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails userDetails = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("password")
+                .username("pacaya")
+                .password("pacaya")
                 .roles("USER")
                 .build();
 
