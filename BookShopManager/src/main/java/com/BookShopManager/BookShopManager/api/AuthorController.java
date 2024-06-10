@@ -12,11 +12,11 @@ import java.util.ArrayList;
 public class AuthorController {
     @Autowired
     private AuthorService authorService;
-    @PostMapping
+    @PostMapping("/add")
     public void saveAuthor( @RequestBody  AuthorDto authorDto){
         authorService.saveAuthor(authorDto);
     }
-    @PutMapping
+    @PutMapping("/update")
     public void updateAuthor(@RequestBody AuthorDto authorDto){
         authorService.updateAuthor(authorDto);
     }
