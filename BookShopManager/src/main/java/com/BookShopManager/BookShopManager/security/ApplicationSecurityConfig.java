@@ -20,7 +20,10 @@ public class ApplicationSecurityConfig  {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((authorize) -> authorize.anyRequest().authenticated()
+        http.authorizeHttpRequests((authorize) ->
+                         authorize
+                        .anyRequest()
+                        .authenticated()
                 )
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(Customizer.withDefaults());
@@ -31,8 +34,8 @@ public class ApplicationSecurityConfig  {
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails userDetails = User.withDefaultPasswordEncoder()
-                .username("pacaya")
-                .password("pacaya")
+                .username("vimukthi")
+                .password("vimukthi")
                 .roles("USER")
                 .build();
 
