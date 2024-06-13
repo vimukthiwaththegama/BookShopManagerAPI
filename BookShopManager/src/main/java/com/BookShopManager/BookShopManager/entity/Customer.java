@@ -18,7 +18,7 @@ import java.util.List;
 @Builder
 public class Customer {
     @Id
-    private String custId;
+    private Integer custId;
     private String custName;
     private String custEmail;
     @OneToMany

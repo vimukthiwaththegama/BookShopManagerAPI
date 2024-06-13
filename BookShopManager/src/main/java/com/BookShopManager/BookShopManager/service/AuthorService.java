@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public interface AuthorService {
     void saveAuthor(AuthorDto authorDto);
     void updateAuthor(AuthorDto authorDto);
-    void deleteAuthor(String authorId);
-    AuthorDto getAuthor(String authorId);
+    void deleteAuthor(Integer authorId);
+    AuthorDto getAuthor(Integer authorId);
     ArrayList<AuthorDto> getAllAuthors(int size,int page,String searchText);
 }

@@ -21,11 +21,11 @@ public class AuthorController {
         authorService.updateAuthor(authorDto);
     }
     @DeleteMapping
-    public void deleteAuthor(@RequestParam String id){
+    public void deleteAuthor(@RequestParam Integer id){
         authorService.deleteAuthor(id);
     }
     @GetMapping("/{id}")
-    public AuthorDto getAuthor(@PathVariable String  id){
+    public AuthorDto getAuthor(@PathVariable Integer  id){
         return authorService.getAuthor(id);
     }
     @GetMapping("/authorList")

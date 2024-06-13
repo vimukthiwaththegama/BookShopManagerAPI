@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 
 public class CustomerDto {
-    private String custId;
+    private Integer custId;
     private String custName;
     private String custEmail;
     @ManyToMany(mappedBy = "   customers")

@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class BookOrderDto {
-    private String orderId;
+    private Integer orderId;
     @ManyToOne
     private Book book;
     @ManyToOne

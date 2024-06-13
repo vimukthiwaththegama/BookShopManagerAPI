@@ -33,7 +33,7 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public void deleteAuthor(String authorId) {
+    public void deleteAuthor(Integer authorId) {
         Optional<Author> tempAuthor =authorRepository.findById(authorId);
         if (tempAuthor.isPresent()){
         authorRepository.delete(tempAuthor.get());
@@ -41,7 +41,7 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public AuthorDto getAuthor(String authorId) {
+    public AuthorDto getAuthor(Integer authorId) {
         Optional<Author> authorData = authorRepository.findById(authorId);
         if(authorData.isPresent()){
             return new AuthorDto(

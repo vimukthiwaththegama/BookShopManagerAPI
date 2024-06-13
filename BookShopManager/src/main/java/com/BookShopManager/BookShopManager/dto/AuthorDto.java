@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 
 public class AuthorDto {
-    private String authorId;
+    private Integer authorId;
     private String authorName;
     @OneToMany(mappedBy = "author")
     private List<Book> books;

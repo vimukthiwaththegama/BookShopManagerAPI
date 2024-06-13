@@ -16,7 +16,7 @@ import java.util.List;
 @Builder
 public class Author {
     @Id
-    private String authorId;
+    private Integer authorId;
     private String authorName;
     @OneToMany(mappedBy = "author")
     private List<Book> books;
