@@ -35,7 +35,7 @@ public class BookOrderServiceImpl implements BookOrderService {
     }
 
     @Override
-    public void deleteBookOrder(String bookOrderId) {
+    public void deleteBookOrder(Integer bookOrderId) {
         Optional<BookOrder> checkBookOrderDto = bookOrderRepository.findById(bookOrderId);
         if(checkBookOrderDto.isPresent()){
             bookOrderRepository.delete(checkBookOrderDto.get());
@@ -43,7 +43,7 @@ public class BookOrderServiceImpl implements BookOrderService {
     }
 
     @Override
-    public BookOrderDto getBookOrder(String bookOrderId) {
+    public BookOrderDto getBookOrder(Integer bookOrderId) {
         Optional<BookOrder> bookOrderdata = bookOrderRepository.findById(bookOrderId);
         if(bookOrderdata.isPresent()){
             return new BookOrderDto(

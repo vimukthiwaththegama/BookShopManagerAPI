@@ -21,11 +21,11 @@ public class BookOrderController {
         bookOrderService.updateBookOrder(bookOrderDto);
     }
     @DeleteMapping
-    public void deleteOrder(@RequestParam String orderId){
+    public void deleteOrder(@RequestParam Integer orderId){
         bookOrderService.deleteBookOrder(orderId);
     }
     @GetMapping("/{orderId}")
-    public BookOrderDto getBookOrder(@PathVariable String orderId){
+    public BookOrderDto getBookOrder(@PathVariable Integer orderId){
         return bookOrderService.getBookOrder(orderId);
     }
     @GetMapping("/bookOrderList")

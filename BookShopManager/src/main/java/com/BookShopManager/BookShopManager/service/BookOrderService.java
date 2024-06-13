@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public interface BookOrderService {
     void saveBookOrder(BookOrderDto bookOrderDto);
     void updateBookOrder(BookOrderDto bookOrderDto);
-    void deleteBookOrder(String bookOrderId);
-    BookOrderDto getBookOrder(String bookOrderId);
+    void deleteBookOrder(Integer bookOrderId);
+    BookOrderDto getBookOrder(Integer bookOrderId);
     ArrayList<BookOrderDto> getAllBookOrders(int size,int page,String searchText);
 }

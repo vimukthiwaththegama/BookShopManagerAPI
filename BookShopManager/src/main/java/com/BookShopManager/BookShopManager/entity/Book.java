@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Book {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer bookId;
     @ManyToOne
     private Author author;

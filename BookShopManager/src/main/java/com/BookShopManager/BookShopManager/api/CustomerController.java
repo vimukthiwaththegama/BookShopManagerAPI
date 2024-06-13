@@ -23,11 +23,11 @@ public class CustomerController {
         customerService.updateCustomer(customerDto);
     }
     @DeleteMapping
-    public void deleteCustomer(@RequestParam String customerId){
+    public void deleteCustomer(@RequestParam Integer customerId){
         customerService.deleteCustomer(customerId);
     }
     @GetMapping("/{customerId}")
-    public CustomerDto getCustomer(@PathVariable String customerId){
+    public CustomerDto getCustomer(@PathVariable Integer customerId){
         return customerService.getCustomer(customerId);
     }
     @GetMapping("/customerList")

@@ -1,8 +1,6 @@
 package com.BookShopManager.BookShopManager.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +14,7 @@ import java.util.List;
 @Builder
 public class Author {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer authorId;
     private String authorName;
     @OneToMany(mappedBy = "author")

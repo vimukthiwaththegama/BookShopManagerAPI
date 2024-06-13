@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class BookOrder {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer orderId;
     @ManyToOne
     private Book book;

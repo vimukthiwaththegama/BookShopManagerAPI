@@ -37,7 +37,7 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public void deleteCustomer(String customerId){
+    public void deleteCustomer(Integer customerId){
         Optional<Customer> checkCustomer = customerRepository.findById(customerId);
         if(checkCustomer.isPresent()){
             customerRepository.delete(checkCustomer.get());
@@ -45,7 +45,7 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public CustomerDto getCustomer(String customerId){
+    public CustomerDto getCustomer(Integer customerId){
         Optional<Customer> custData = customerRepository.findById(customerId);
         if(custData.isPresent()){
             return new CustomerDto(
