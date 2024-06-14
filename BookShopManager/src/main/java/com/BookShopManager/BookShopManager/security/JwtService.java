@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.security.Key;
 
+import static io.jsonwebtoken.Jwts.*;
+
 @Service
 public class JwtService {
 
@@ -17,7 +19,7 @@ public class JwtService {
         return null;
     }
     public Claims extractAllClaims(String jwtToken){
-        return Jwts.parser()
+        return Jwts.parserBuilder()
                 .setSigningKey(getSignInKey()).build()
                 .parseClaimsJws(jwtToken)
                 .getBody();
