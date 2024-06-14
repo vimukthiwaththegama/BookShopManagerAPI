@@ -16,16 +16,19 @@ import java.util.function.Function;
 
 @Service
 public class UserServiceImpl implements UserRepository {
-    private final UserRepository userRepository;
 
 
     public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
     }
 
     @Override
     public void saveUser(UserDto userDto) {
 
+    }
+
+    @Override
+    public Optional<User> findByEmail(String email) {
+        return Optional.empty();
     }
 
     @Override
