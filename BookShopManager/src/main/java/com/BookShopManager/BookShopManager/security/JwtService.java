@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -26,6 +27,10 @@ public class JwtService {
         final Claims claims=extractAllClaims(jwtToken);
         return claimsResolver.apply(claims);
     }
+    public String generateToken(UserDetails userDetails){
+        return generateToken(new HashMap<>(),userDetails);
+    }
+
     public String generateToken(
             Map<String,Object> extraClaims,
             UserDetails userDetails
@@ -39,6 +44,19 @@ public class JwtService {
                 .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
+    public boolean isTokenValid(String jwtToken,UserDetails userDetails){
+        final String userName=extractUsername(jwtToken);
+        return (userName.equals(userDetails.getUsername())) && !isTokenExpired(jwtToken);
+    }
+
+    private boolean isTokenExpired(String jwtToken) {
+        return extractExpiration(jwtToken).before(new Date());
+    }
+
+    private Date extractExpiration(String jwtToken) {
+        return extractClaim(jwtToken,Claims:: getExpiration);
+    }
+
     private Claims extractAllClaims(String jwtToken){
         return Jwts
                 .parserBuilder()
