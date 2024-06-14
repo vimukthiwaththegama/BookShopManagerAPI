@@ -17,6 +17,8 @@ import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 @Component
 @RequiredArgsConstructor
 public class JwtAuthFilter extends OncePerRequestFilter {
+
+    private final JwtService jwtService;
     @Override
     protected void doFilterInternal(
                                     @NonNull HttpServletRequest httpServletRequest,
@@ -26,7 +28,11 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         final String authHeader = httpServletRequest.getHeader("Authorization");
         final String userEmail;
         final String jwtToken;
-
-
+        if(authHeader == null || !authHeader.startsWith("Bearer ")) {
+            filterChain.doFilter(httpServletRequest,httpServeletResponse);
+            return ;
+        }
+        jwtToken = authHeader.substring(7);
+        userEmail=jwtService.extractUsername(jwtToken);
     }
 }
